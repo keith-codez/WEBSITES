@@ -29,9 +29,9 @@ html::-webkit-scrollbar-thumb{
 section{
     padding: 50px 100px;
 }
-header{
+header {
     position: fixed;
-    width:100%;
+    width: 100%;
     top: 0;
     right: 0;
     z-index: 1000;
@@ -39,10 +39,20 @@ header{
     align-items: center;
     justify-content: space-between;
     background: #eeeff1;
-    padding: 15px 100px;
+    height: 80px; /* Set the height of the header */
+    padding: 0 100px; /* Adjust horizontal padding as needed */
 }
-.logo img{
-    width: 40px;
+
+.logo {
+    height: 100%; /* Fill the height of the header */
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.logo img {
+    max-height: 100%; /* Set the maximum height of the image */
+    width: auto; /* Maintain aspect ratio */
 }
 
 .navbar{
@@ -102,6 +112,13 @@ header{
     grid-template-columns: repeat(2, 1fr);
 }
 
+
+.text{
+    position:relative;
+    bottom:200px;
+    left: 100px;
+    
+}
 .text h1{
     font-size: 3.5rem;
     letter-spacing: 2px;
@@ -118,6 +135,8 @@ header{
 
 
 .form-container form{
+    position: relative;
+    left:100px;
     display: flex;
     flex-direction: column;
     align-items: center;
