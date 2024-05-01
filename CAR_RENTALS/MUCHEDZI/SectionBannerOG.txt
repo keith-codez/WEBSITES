@@ -1,0 +1,62 @@
+
+    <section class="home" id="home">
+        <div class="text" id="banner">
+            <h1> <span>Looking</span> to <br>rent a car?</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing <br> elit. Necessecusandae nespiente!</p>
+        </div>
+        <div class="form-container">
+            <form action="">
+                <div class="input-box">
+                    <span>First Name</span>
+                    <input type="text" name="first_name" placeholder="Enter your first name" required>
+                </div>
+                <div class="input-box">
+                    <span>Last Name</span>
+                    <input type="text" name="last_name" placeholder="Enter your last name" required>
+                </div>
+                <div class="input-box">
+                    <span>Email Address</span>
+                    <input type="email" name="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="input-box">
+                    <span>Phone Number</span>
+                    <input type="tel" name="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="input-box">
+                    <span>Pick-Up Date</span>
+                    <input type="date" name="pick_up_date" required>
+                </div>
+                <div class="input-box">
+                    <span>Drop-Off Date</span>
+                    <input type="date" name="drop_off_date" required>
+                </div>
+
+                <div class="input-box">
+                    <span>Type of car</span>
+                    <select name="Type Of Vehicle" class="TypeOfCar" required>
+                        <option class="option">Option 1</option>
+                        <option class="option">Option 2</option>
+                        <option class="option">Option 3</option>
+                    </select>
+                </div>
+                
+                <input type="submit" class="btn" value="Submit">
+            </form>
+        </div>
+        
+
+    </section>
+
+
+    .home{
+    width: 100%;
+    min-height: 90vh;
+    position: relative;
+    background: linear-gradient(to bottom, #3498db, #ffffff);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
