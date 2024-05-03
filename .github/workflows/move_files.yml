@@ -14,10 +14,9 @@ jobs:
 
       - name: Move website files
         run: |
-          shopt -s dotglob  # Include hidden files
-          mv CAR_RENTALS/MUCHEDZI/* .
-          mv CAR_RENTALS/MUCHEDZI/.gitignore .
-          shopt -u dotglob  # Reset dotglob option
+          cp CAR_RENTALS/MUCHEDZI/* .
+          cp CAR_RENTALS/MUCHEDZI/.gitignore .
+          rm -r CAR_RENTALS/MUCHEDZI  # Remove the old directory
         working-directory: ${{ github.workspace }}
 
       - name: Commit changes
