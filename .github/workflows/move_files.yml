@@ -16,7 +16,7 @@ jobs:
         run: |
           mv CAR_RENTALS/MUCHEDZI/* .
           mv CAR_RENTALS/MUCHEDZI/.gitignore .
-        working-directory: ${{ github.workspace }}/WEBSITES
+        working-directory: ${{ github.workspace }}
 
       - name: Commit changes
         run: |
