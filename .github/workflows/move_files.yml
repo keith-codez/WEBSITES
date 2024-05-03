@@ -3,7 +3,7 @@ name: Move Website Files to Root
 on:
   push:
     branches:
-      - master  # Adjust this to your main branch name if different
+      - master
 
 jobs:
   move_files:
@@ -14,9 +14,9 @@ jobs:
 
       - name: Move website files
         run: |
-          mv WEBSITES/CAR_RENTALS/MUCHEDZI/* .
-          mv WEBSITES/CAR_RENTALS/MUCHEDZI/.gitignore .
-        working-directory: ${{ github.workspace }}
+          mv CAR_RENTALS/MUCHEDZI/* .
+          mv CAR_RENTALS/MUCHEDZI/.gitignore .
+        working-directory: ${{ github.workspace }}/WEBSITES
 
       - name: Commit changes
         run: |
