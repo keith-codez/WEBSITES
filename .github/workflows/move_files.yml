@@ -1,0 +1,27 @@
+name: Move Website Files to Root
+
+on:
+  push:
+    branches:
+      - master  # Adjust this to your main branch name if different
+
+jobs:
+  move_files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Move website files
+        run: |
+          mv WEBSITES/CAR_RENTALS/MUCHEDZI/* .
+          mv WEBSITES/CAR_RENTALS/MUCHEDZI/.gitignore .
+        working-directory: ${{ github.workspace }}
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Move website files to root folder"
+          git push
