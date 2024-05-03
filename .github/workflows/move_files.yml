@@ -14,7 +14,7 @@ jobs:
 
       - name: Move website files
         run: |
-          cp CAR_RENTALS/MUCHEDZI/* .
+          cp -r CAR_RENTALS/MUCHEDZI/* .
           cp CAR_RENTALS/MUCHEDZI/.gitignore .
           rm -r CAR_RENTALS/MUCHEDZI  # Remove the old directory
         working-directory: ${{ github.workspace }}
