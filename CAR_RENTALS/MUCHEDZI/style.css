@@ -654,3 +654,31 @@ header {
     background-color: var(--handy-color);
     color: white;
 }
+
+.home-box{
+    border: 5px solid blue;
+}
+
+.Slime{
+    width:1000px;
+    height: 350px;
+    border:2px solid greenyellow;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.Slime h1{
+    font-size: 3.5rem;
+    
+}
+
+.Slime span{
+    border:5px solid red;
+    font-weight: 350;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
