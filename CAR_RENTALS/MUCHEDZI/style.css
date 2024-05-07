@@ -643,15 +643,16 @@ header {
     font-size: 1.6rem;
 }
 
-.Form-Container {
+
+.Form-OuterContainer {
     width: 100%;
-    height:1000px;
+    height: 1000px;
     position: relative;
     display: grid;
     grid-template-columns: 35% 65%;
-    align-items: center;
+    align-items: stretch; /* Make both columns equal height */
     border: 5px solid purple;
-    padding: 0px;
+    padding:0px;
 }
 
 .form-image {
@@ -660,15 +661,159 @@ header {
     border: 2px solid red;
 }
 
-.form-content {
+.form-content-container {
     border: 2px solid blue;
     height: 100%;
+    padding: 20px; /* Add padding to the form content container */
 }
 
 .form-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border: 5px solid red; /* Border for the image */
-    filter: brightness(50%); /* Example filter */
+    border: 5px solid red;
+    filter: brightness(50%);
+}
+
+.content-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    border: 5px solid green;
+    height: 190px;
+    background-color: var(--handy-color);
+    border: 2px solid greenyellow;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.content-header span {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+.content-header h1 {
+    font-size: 3rem;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+select,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"] {
+    width: 100%;
+    padding: 8px;
+}
+
+.dropdown-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+
+.more-info-row {
+    grid-column: 1 / span 2;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.input-group input,
+.input-group select {
+    border: none;
+    border-bottom: 1px solid black; /* Initial bottom border */
+    outline: none; /* Remove outline on focus */
+    transition: border-color 0.3s ease; /* Smooth transition for border color change */
+}
+
+/* Change border color on hover */
+.input-group input:hover,
+.input-group select:hover {
+    border-bottom-color: blue; /* Change border color on hover */
+    border-bottom-width: 2px;
+}
+
+
+.destination-row {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.destination-row input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid black; /* Initial bottom border */
+    outline: none; /* Remove outline on focus */
+    transition: border-color 0.3s ease; /* Smooth transition for border color change */
+}
+
+/* Change border color on hover */
+.destination-row input:hover {
+    border-bottom-color: blue; /* Change border color on hover */
+}
+
+.vehicle-select {
+    width: calc(100% - 30px); /* Adjust width to accommodate the dropdown icon */
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid black; /* Initial bottom border */
+    outline: none; /* Remove outline on focus */
+    transition: border-color 0.3s ease; /* Smooth transition for border color change */
+    appearance: none; /* Remove default appearance */
+    -webkit-appearance: none; /* Safari and Chrome */
+    -moz-appearance: none; /* Firefox */
+    color: #666; /* Text color */
+}
+
+.vehicle-select option:first-child {
+    color: #999; /* Placeholder text color */
+}
+
+/* Change border color on hover */
+.vehicle-select:hover {
+    border-bottom-color: blue; /* Change border color on hover */
+}
+
+.dropdown-icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    pointer-events: none;
+    padding: 0 10px;
+    color: gray; /* Dropdown icon color */
 }

@@ -82,21 +82,73 @@
         </div>
     </section>
 
+    
 
-    <section class="Form-Container">
+    <section class="Form-OuterContainer">
         <div class="form-image">
             <a href="#" id=""><img src="Images/keys.jpg" alt=""></a>
         </div>
-        <div class="form-content">
-            <!-- Your form content goes here -->
-            <form>
-                <!-- Form fields, labels, etc. -->
-            </form>
+        <div class="form-content-container">
+            <div class="content-header">
+                <h1>Book Now</h1>
+                <span>Request A Quote</span>
+            </div>
+            <div class="form-container">
+                <div class="form-left">
+                    <div class="input-group">
+                        <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="organisation" name="organisation" placeholder="Organisation">
+                    </div>
+                    <div class="input-group">
+                        <div class="select-wrapper">
+                            <select id="vehicle" name="vehicle" class="vehicle-select" required>
+                                <option value="" disabled selected hidden>Vehicle</option>
+                                <option value="car">Car</option>
+                                <option value="bike">Bike</option>
+                                <option value="van">Van</option>
+                            </select>
+                            <div class="dropdown-icon">&#9662;</div>
+                        </div>
+                    </div>                                       
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                </div>
+                <div class="form-right">
+                    <div class="input-group">
+                        <input type="text" id="surname" name="surname" placeholder="Surname" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="date" id="pickupDate" name="pickupDate" placeholder="Pick Up Date" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="date" id="dropOffDate" name="dropOffDate" placeholder="Drop Off Date" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="pickupLocation">Pick Up Location:</label>
+                        <select id="pickupLocation" name="pickupLocation">
+                            <option value="location1">Location 1</option>
+                            <option value="location2">Location 2</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                </div>
+            </div>
+            <div class="destination-row">
+                <input type="text" id="destination" name="destination" placeholder="Destination *" required>
+
+            </div>
+            <div class="more-info-row">
+                <input type="text" placeholder="More info">
+            </div>
+            <button type="submit">Submit</button>
         </div>
     </section>
-    
-
-
 
 
     <section class="services" id="services" >
