@@ -817,3 +817,15 @@ button {
     padding: 0 10px;
     color: gray;
 }
+
+.form-container{
+    padding-top: 20px;
+    border: 5px solid red;
+}
+.input-group{
+    height:75px;
+}
+
+#date{
+    margin-top: -25px;
+}
