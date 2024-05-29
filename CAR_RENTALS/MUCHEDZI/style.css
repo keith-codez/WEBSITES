@@ -687,6 +687,7 @@ header {
     color: white;
     text-align: center;
     padding: 20px;
+    
 }
 
 .content-header span {
@@ -697,6 +698,7 @@ header {
 
 .content-header h1 {
     font-size: 3rem;
+  
 }
 
 .form-container {
@@ -736,13 +738,26 @@ input[type="date"] {
     pointer-events: none;
 }
 
-
 .more-info-row {
-    grid-column: 1 / span 2;
+    grid-column: 1 / span 2; /* Span across both columns */
+}
+
+.more-info-input {
+    width: 100%; /* Ensure the textarea takes the full width of its container */
+    height: 150px; /* Adjust the height as needed */
+    padding: 10px; /* Optional: Add padding for better readability */
+    font-size: 14px; /* Optional: Adjust the font size if necessary */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    resize: none; /* Prevent resizing if you want a fixed size */
+}
+
+.more-info-input::placeholder {
+    text-align: left; /* Align text to the left */
+    vertical-align: top; /* Align text to the top (not necessary for most browsers) */
 }
 
 button {
-    margin-top: 10px;
+    margin-top: 50px;
     padding: 10px;
     width: 100%;
     background-color: #4CAF50;
@@ -756,7 +771,7 @@ button {
     border: none;
     border-bottom: 1px solid black; /* Initial bottom border */
     outline: none; /* Remove outline on focus */
-    transition: border-color 0.3s ease; /* Smooth transition for border color change */
+    transition: border-color 0.4s ease; /* Smooth transition for border color change */
 }
 
 /* Change border color on hover */
@@ -770,6 +785,7 @@ button {
 .destination-row {
     width: 100%;
     margin-bottom: 15px;
+    padding: 10px;
 }
 
 .destination-row input {
@@ -828,4 +844,8 @@ button {
 
 #date{
     margin-top: -25px;
+}
+
+::placeholder {
+    font-size: 15px;
 }
