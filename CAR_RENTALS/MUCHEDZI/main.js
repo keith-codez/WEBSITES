@@ -32,6 +32,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.querySelector('.View-Cars').addEventListener('click', function() {
+    window.location.href = '#services';
 
+});
 
+document.querySelector('.Book-Now').addEventListener('click', function() {
+    window.location.href = '#Form';
 
+});
