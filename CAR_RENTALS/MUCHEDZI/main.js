@@ -41,3 +41,6 @@ document.querySelector('.Book-Now').addEventListener('click', function() {
     window.location.href = '#Form';
 
 });
+
+
+
