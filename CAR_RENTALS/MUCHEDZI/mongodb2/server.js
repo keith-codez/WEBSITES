@@ -6,7 +6,7 @@ const port = 3019
 const app = express()
 
 app.get('/',(req,res)=>{
-    res.sendFile(path.join(__dirname, 'index.html'))
+    res.sendFile(path.join(__dirname, 'C:\Users\keith\WEBSITES\CAR_RENTALS\MUCHEDZI\index.html'))
 })
 
 app.listen(port,()=>{
